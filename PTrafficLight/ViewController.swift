@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var aTimer: Timer!
-    var clock: Double! = 0
+    var clock: Int! = 0
     
     
     @IBOutlet weak var red: UILabel!
@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     }
 
     func setup() {
-        aTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
-            self.clock += 0.1
+        aTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            self.clock += 1
             print(self.clock)
             print(self.aTimer.isValid)
             self.yellow.isHidden = true
